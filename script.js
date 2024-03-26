@@ -110,6 +110,7 @@ const heightLess200 = characters.filter((chars) => chars.height < 200);
 const maleChars = characters.filter((chars) => chars.gender === 'male');
 console.log(maleChars);
 //4. Get all female characters
+const femaleChars = characters.filter((chars) => chars.gender === 'female');
 
 //***SORT***
 //1. Sort by mass
