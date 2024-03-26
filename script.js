@@ -143,15 +143,45 @@ const maleChars = characters.filter((chars) => chars.gender === 'male');
 const femaleChars = characters.filter((chars) => chars.gender === 'female');
 
 //***SORT***
+//SORT method modify the original array, toSorted not
+
 //1. Sort by mass
-const sortByMass = characters.sort((a, b) => a.mass - b.mass);
+const sortByMass = characters.toSorted((a, b) => a.mass - b.mass);
 // console.log(sortByMass);
 
 //2. Sort by height
-const sortByHeight = characters.sort((a, b) => a.height - b.height);
-console.log(sortByHeight);
+const sortByHeight = characters.toSorted((a, b) => a.height - b.height);
+// console.log(sortByHeight);
 //3. Sort by name
+
+const sortedByName = characters.toSorted((a, b) => {
+  const nameA = a.name.toUpperCase(); // Ignore case
+  const nameB = b.name.toUpperCase(); // Ignore case
+
+  if (nameA < nameB) {
+    return -1;
+  }
+  if (nameA > nameB) {
+    return 1;
+  }
+  return 0; // Names are equal
+});
+// console.log(sortedByName);
+// console.log(characters);
 //4. Sort by gender
+const sortByGender = characters.toSorted((a, b) => {
+  const genderA = a.gender.toLowerCase();
+  const genderB = b.gender.toLowerCase();
+
+  if (genderA < genderB) {
+    return -1;
+  }
+  if (genderA > genderB) {
+    return 1;
+  }
+  return 0; // Genders are equal
+});
+// console.log(sortByGender);
 
 //***EVERY***
 //1. Does every character have blue eyes?
