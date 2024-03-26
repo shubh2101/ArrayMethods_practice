@@ -27,6 +27,34 @@ const characters = [
     eye_color: 'blue',
     gender: 'male',
   },
+  {
+    name: 'Yoda',
+    height: 66,
+    mass: 17,
+    eye_color: 'green',
+    gender: 'male',
+  },
+  {
+    name: 'Padmé Amidala',
+    height: 165,
+    mass: 45,
+    eye_color: 'brown',
+    gender: 'female',
+  },
+  {
+    name: 'Obi-Wan Kenobi',
+    height: 182,
+    mass: 81,
+    eye_color: 'blue',
+    gender: 'male',
+  },
+  {
+    name: 'Mace Windu',
+    height: 194,
+    mass: 89,
+    eye_color: 'brown',
+    gender: 'male',
+  },
 ];
 
 //***MAP***
@@ -69,9 +97,11 @@ const totalMass = characters.reduce(
   0
 );
 // console.log(totalMass);
+
 //2. Get total height of all characters
 const totalHeight = heights.reduce((total, height) => total + height, 0);
 // console.log(totalHeight);
+
 //3. Get total number of characters by eye color
 // const eyeColors = characters.map((chars) => chars.eye_color);
 const eyeColorsCount = characters.reduce((acc, curr) => {
@@ -108,13 +138,18 @@ const heightLess200 = characters.filter((chars) => chars.height < 200);
 
 //3. Get all male characters
 const maleChars = characters.filter((chars) => chars.gender === 'male');
-console.log(maleChars);
+// console.log(maleChars);
 //4. Get all female characters
 const femaleChars = characters.filter((chars) => chars.gender === 'female');
 
 //***SORT***
 //1. Sort by mass
+const sortByMass = characters.sort((a, b) => a.mass - b.mass);
+// console.log(sortByMass);
+
 //2. Sort by height
+const sortByHeight = characters.sort((a, b) => a.height - b.height);
+console.log(sortByHeight);
 //3. Sort by name
 //4. Sort by gender
 
