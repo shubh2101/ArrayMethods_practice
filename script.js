@@ -95,11 +95,15 @@ const charsCount = characters.reduce((acc, curr) => {
   acc[names] = noSpaceNames.length;
   return acc;
 }, {});
-console.log(charsCount);
+// console.log(charsCount);
 
 //***FILTER***
 //1. Get characters with mass greater than 100
+const massGreater100 = characters.filter((chars) => chars.mass > 100);
+// console.log(massGreater100);
+
 //2. Get characters with height less than 200
+
 //3. Get all male characters
 //4. Get all female characters
 
