@@ -105,7 +105,10 @@ const massGreater100 = characters.filter((chars) => chars.mass > 100);
 //2. Get characters with height less than 200
 const heightLess200 = characters.filter((chars) => chars.height < 200);
 // console.log(heightLess200);
+
 //3. Get all male characters
+const maleChars = characters.filter((chars) => chars.gender === 'male');
+console.log(maleChars);
 //4. Get all female characters
 
 //***SORT***
