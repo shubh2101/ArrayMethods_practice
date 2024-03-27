@@ -1,4 +1,5 @@
-import { characters } from './data.js';
+import characters from './data.js';
+// import { characters } from './data.js';
 
 //***MAP***
 //1. Get array of all names
@@ -124,13 +125,19 @@ const sortByGender = characters.toSorted((a, b) => {
   }
   return 0; // Genders are equal
 });
-console.log(sortByGender);
+// console.log(sortByGender);
 
 //***EVERY***
 //1. Does every character have blue eyes?
-//2. Does every character have mass more than 40?
+const everyBlue = characters.every((chars) => chars.eye_color === 'blue');
+console.log(everyBlue);
+//2. Does every character have mass more than 16?
+const everyMass40 = characters.every((chars) => chars.mass > 16);
+console.log(everyMass40);
 //3. Is every character shorter than 200?
+const sortHeight = characters.every((chars) => chars.height < 200);
 //4. Is every character male?
+const isAllMale = characters.every((chars) => chars.gender === 'male');
 
 //***SOME***
 //1. Is there at least one male character?

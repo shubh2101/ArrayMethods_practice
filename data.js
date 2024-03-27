@@ -57,4 +57,5 @@ const characters = [
   },
 ];
 
-export { characters };
+// export { characters };
+export default characters;
