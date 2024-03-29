@@ -130,10 +130,10 @@ const sortByGender = characters.toSorted((a, b) => {
 //***EVERY***
 //1. Does every character have blue eyes?
 const everyBlue = characters.every((chars) => chars.eye_color === 'blue');
-console.log(everyBlue);
+// console.log(everyBlue);
 //2. Does every character have mass more than 16?
 const everyMass40 = characters.every((chars) => chars.mass > 16);
-console.log(everyMass40);
+// console.log(everyMass40);
 //3. Is every character shorter than 200?
 const sortHeight = characters.every((chars) => chars.height < 200);
 //4. Is every character male?
@@ -141,6 +141,14 @@ const isAllMale = characters.every((chars) => chars.gender === 'male');
 
 //***SOME***
 //1. Is there at least one male character?
+const isOneMaleAtleast = characters.some((chars) => chars.gender === 'male');
+console.log(isOneMaleAtleast);
+
 //2. Is there at least one character with blue eyes?
+const isOneBlueAtleast = characters.some((chars) => chars.eye_color === 'blue');
+
 //3. Is there at least one character taller than 210?
+const isOneTallerAtleast = characters.some((chars) => chars.height > 210);
+
 //4. Is there at least one character that has mass less than 50?
+const isOneLessMassAtleast = characters.some((chars) => chars.mass < 50);
