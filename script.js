@@ -142,7 +142,7 @@ const isAllMale = characters.every((chars) => chars.gender === 'male');
 //***SOME***
 //1. Is there at least one male character?
 const isOneMaleAtleast = characters.some((chars) => chars.gender === 'male');
-console.log(isOneMaleAtleast);
+// console.log(isOneMaleAtleast);
 
 //2. Is there at least one character with blue eyes?
 const isOneBlueAtleast = characters.some((chars) => chars.eye_color === 'blue');
