@@ -26,8 +26,6 @@ const test1 = myColor.toString();
 
 function evenDash(num) {
   const strArr = num.toString().split('');
-  console.log(strArr);
-
   const result = [];
 
   for (let i = 0; i < strArr.length; i++) {
@@ -37,7 +35,21 @@ function evenDash(num) {
       result.push(strArr[i]);
     }
   }
-  console.log(result.join(''));
+
   return result.join('');
 }
 evenDash(2254689077);
+
+// Write a JavaScript program to sort the items of an array.
+//Sample array : var arr1 = [ -3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+//Sample Output : -4,-3,1,2,3,5,6,7,8
+
+function sortNum(arr) {
+  arr.sort((a, b) => {
+    return a - b;
+  });
+  return arr;
+}
+
+let arr = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
+sortNum(arr);

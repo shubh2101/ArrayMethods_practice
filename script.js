@@ -87,7 +87,7 @@ const maleChars = characters.filter((chars) => chars.gender === 'male');
 const femaleChars = characters.filter((chars) => chars.gender === 'female');
 
 //***SORT***
-//SORT method modify the original array, toSorted not
+//SORT method modify the original array, toSorted returns a new array 
 
 //1. Sort by mass
 const sortByMass = characters.toSorted((a, b) => a.mass - b.mass);
